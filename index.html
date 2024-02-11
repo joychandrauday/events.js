@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>events of DOM</title>
 </head>
+
 <body>
-    <h1>the Event on DOM</h1>
-    <button>click</button>
+    <div class="main-banner flex items-center justify-center">
+        <div class="wrapper">
+            <h1 class="text-4xl pb-4 capitalize text-white font-bold">the Event on DOM</h1>
+            <button onclick="document.body.style.backgroundColor='red'" class="btn btn-warning uppercase px-12 text-white mb-4">click for red bg</button><br>
+            <button onclick="makeRed()" class="btn btn-warning uppercase px-12 text-white mb-4">click for yellow bg</button><br>
+            <button id="makeBlue" class="btn btn-warning uppercase px-12 text-white mb-4">click for Blue bg</button><br>
+            <button id="makePink" class="btn btn-warning uppercase px-12 text-white mb-4">click for Pink bg</button><br>
+            <button id="makeGreen" class="btn btn-warning uppercase px-12 text-white mb-4">click for Green bg</button><br>
+            <button id="makeTomato" class="btn btn-warning uppercase px-12 text-white mb-4">click for Tomato bg</button><br>
+        
+        </div>
+    </div>
+    <div class="main-banner bg-red flex items-center justify-center">
+        <div class="wrapper">
+            <h1 class="text-4xl pb-4 capitalize text-white font-bold">more about onclick</h1>
+            <h3 id="dummyH3text" class="text-xl capitalize text-white">dummy text of Lorem ipsum dolor sit amet.</h3>
+            <button id="dummyText" class="btn btn-danger uppercase px-12 text-black my-4">click to change text of upper text</button><br>
+            <!-- input -->
+            <input id="inputName" type="text" class="p-4 rounded">
+            <button id="inputSubmit" class="btn btn-danger uppercase px-12 text-black my-4">submit</button>
+            <p id="inputValue" class="capitalize text-white">your input value will show here</p>
+            
+            <div class="mt-8 post text-left w-3/4 mx-auto">
+                <h1 class="text-white capitalize text-xl">the new post</h1>
+                <p class="text-gray ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor autem dignissimos placeat explicabo unde fuga et impedit quod temporibus. Corrupti, ea odio ab enim voluptatem voluptatum laboriosam aut ipsa saepe, ullam animi sequi dolore, possimus similique reiciendis! Eum similique quo inventore? Quod facere nisi eveniet! Sapiente veritatis delectus voluptatibus obcaecati totam reiciendis sit quidem esse cum placeat, quo vitae ab quas asperiores praesentium ducimus aliquid hic perspiciatis facere numquam architecto id! Quis hic asperiores culpa magnam nostrum deleniti, quod eligendi, ipsam doloremque, officiis impedit eos? Provident vitae deleniti dolore ratione.</p>
+                <div class="comentOption flex items-center">
+                    <div class="comment-form">
+                        <textarea name="" id="commentInputForm" cols="60" rows="4" class="rounded bg-none"></textarea><br>
+                        <button id="commentSubmit" class="btn btn-danger uppercase px-12 text-black">post comment</button>
+                    </div>
+                    <div id="commentContainer" class="text-left text-white p-4 capitalize font-bold text-xl">
+                        <h1 class="text-[#003032]">comment will show here:</h1>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
 
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
