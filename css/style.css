@@ -5,3 +5,13 @@ body{
     height: 100vh;
     text-align: center;
 }
+.wrapper{
+    border: 2px solid white;
+    padding: 30px 30%;
+    border-radius: 5px;
+}
+.items{
+    color: wheat;
+    font-weight:600;
+    list-style: decimal;
+}

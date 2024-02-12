@@ -58,3 +58,40 @@ document.getElementById('commentSubmit').addEventListener('click',function() {
     newCommentContainer.appendChild(p);
     commentBox.value='';
 })
+
+//////counter
+
+let countNumber=0;
+
+document.getElementById('countPlus').addEventListener('click',function() {
+    countNumber+=1;
+    const count= document.getElementById('count');
+    count.innerText=countNumber;
+})
+document.getElementById('countMinus').addEventListener('click',function() {
+    countNumber-=1;
+    const count= document.getElementById('count');
+    count.innerText=countNumber;
+})
+
+
+//////add list item
+
+
+
+document.getElementById('liSubmit').addEventListener('click',function() {
+    const addedItem=document.getElementById('liInput')
+    const addedItemText=addedItem.value;
+    const listParent=document.getElementById('mainOl')
+    const li=document.createElement('li')
+    li.innerText=addedItemText;
+    li.setAttribute('class','items')
+    listParent.appendChild(li);
+
+    addedItem.value='';
+})
+const targetLi = document.getElementById("mainOl").getElementsByTagName("li");
+console.log(targetLi)
+targetLi.addEventListener('click',function() {
+    console.log(55)
+})
